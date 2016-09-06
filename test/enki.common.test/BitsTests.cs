@@ -1,8 +1,8 @@
 ﻿using Xunit;
 
-namespace enki.common.tests
+namespace enki.common.test
 {
-    public static class Bits
+    public class Bits
     {
         [Fact]
         public void NotTest()
