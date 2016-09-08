@@ -16,5 +16,10 @@
       },
       "imports": "dnxcore50"
     }
+  },
+  "scripts": {
+    "postpublish": [
+      "dotnet pack --no-build --configuration %compile:Configuration%"
+    ]
   }
 }
