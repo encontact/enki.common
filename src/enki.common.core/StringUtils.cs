@@ -123,30 +123,30 @@ namespace enki.common
             return name.Trim();
         }
 
-        /// <summary>
-        /// Remove acentos de uma string qualquer.
-        /// </summary>
-        /// <param name="text">Texto para remover os acentos.</param>
-        /// <returns>Mesma string sem os acentos.</returns>
-        public static string RemoveAccents(string text)
-        {
-            try
-            {
-                StringBuilder sbReturn = new StringBuilder();
-                var arrayText = text.Normalize(NormalizationForm.FormD).ToCharArray();
+        // /// <summary>
+        // /// Remove acentos de uma string qualquer.
+        // /// </summary>
+        // /// <param name="text">Texto para remover os acentos.</param>
+        // /// <returns>Mesma string sem os acentos.</returns>
+        // public static string RemoveAccents(string text)
+        // {
+        //     try
+        //     {
+        //         StringBuilder sbReturn = new StringBuilder();
+        //         var arrayText = text.Normalize(NormalizationForm.FormD).ToCharArray();
 
-                foreach (char letter in arrayText)
-                {
-                    if (CharUnicodeInfo.GetUnicodeCategory(letter) != UnicodeCategory.NonSpacingMark)
-                        sbReturn.Append(letter);
-                }
-                return sbReturn.ToString();
-            }
-            catch
-            {
-                throw;
-            }
-        }
+        //         foreach (char letter in arrayText)
+        //         {
+        //             if (CharUnicodeInfo.GetUnicodeCategory(letter) != UnicodeCategory.NonSpacingMark)
+        //                 sbReturn.Append(letter);
+        //         }
+        //         return sbReturn.ToString();
+        //     }
+        //     catch
+        //     {
+        //         throw;
+        //     }
+        // }
 
         /// <summary>
         /// Remove qualquer caractere do texto que não seja um texto de A-Z/a-z ou numérico de 0-9
