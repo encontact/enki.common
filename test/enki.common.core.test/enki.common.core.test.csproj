@@ -7,13 +7,13 @@
     <AssemblyName>enki.common.core.test</AssemblyName>
     <PackageId>enki.common.core.test</PackageId>
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
-    <RuntimeFrameworkVersion>1.0.4</RuntimeFrameworkVersion>
+    <RuntimeFrameworkVersion>2.0.0</RuntimeFrameworkVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.0.0-preview-20170106-08" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.2.0-beta5-build1225" />
-    <PackageReference Include="xunit" Version="2.2.0-beta5-build3474" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.5.0-preview-20170810-02" />
+    <!-- <PackageReference Include="xunit.runner.visualstudio" Version="2.2.0-beta5-build1225" /> -->
+    <PackageReference Include="xunit" Version="2.3.0-beta4-build3742" />
     <ProjectReference Include="..\..\src\enki.common.core\enki.common.core.csproj" />
   </ItemGroup>
 
