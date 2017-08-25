@@ -7,7 +7,7 @@
         {
             "taskName": "build",
             "args": [
-                ""
+                "${workspaceRoot}\\src\\enki.common.core\\enki.common.core.csproj"
             ],
             "isBuildCommand": true,
             "problemMatcher": "$msCompile"

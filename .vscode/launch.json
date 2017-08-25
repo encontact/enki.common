@@ -6,7 +6,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceRoot}\\bin\\Debug\\netcoreapp1.0\\enki.common.core.dll",
+            "program": "${workspaceRoot}\\bin\\Debug\\netstandard2.0\\enki.common.core.dll",
             "args": [],
             "cwd": "${workspaceRoot}",
             "externalConsole": false,
@@ -16,7 +16,7 @@
             "name": ".NET Core Attach",
             "type": "coreclr",
             "request": "attach",
-            "processId": "${command.pickProcess}"
+            "processId": "${command:pickProcess}"
         }
     ]
 }

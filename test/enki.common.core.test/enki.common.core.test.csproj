@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <Description>Tests to enkilabs common library for support common features.</Description>
-    <Copyright>Enkilabs 2016</Copyright>
-    <TargetFramework>netstandard1.6</TargetFramework>
+    <Copyright>Enkilabs 2017</Copyright>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>enki.common.core.test</AssemblyName>
     <PackageId>enki.common.core.test</PackageId>
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>

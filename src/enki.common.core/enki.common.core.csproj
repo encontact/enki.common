@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Description>Enkilabs common library for support common features.</Description>
     <Copyright>Enkilabs 2016</Copyright>
-    <TargetFramework>netstandard1.6</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <DebugType>portable</DebugType>
     <AssemblyName>enki.common.core</AssemblyName>
     <PackageId>enki.common.core</PackageId>
