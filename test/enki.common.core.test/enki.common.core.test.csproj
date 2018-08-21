@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Description>Tests to enkilabs common library for support common features.</Description>
     <Copyright>Enkilabs 2017</Copyright>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>net461;netcoreapp2.0;</TargetFrameworks>
     <AssemblyName>enki.common.core.test</AssemblyName>
     <PackageId>enki.common.core.test</PackageId>
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
@@ -11,9 +11,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.5.0-preview-20170810-02" />
-    <!-- <PackageReference Include="xunit.runner.visualstudio" Version="2.2.0-beta5-build1225" /> -->
-    <PackageReference Include="xunit" Version="2.3.0-beta4-build3742" />
+    <PackageReference Include="xunit" Version="2.4.0" />
+    <PackageReference Include="xunit.runner.utility" Version="2.4.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
     <ProjectReference Include="..\..\src\enki.common.core\enki.common.core.csproj" />
   </ItemGroup>
 
