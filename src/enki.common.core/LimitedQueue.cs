@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Enki.Common
+namespace enki.common.core
 {
     /// <summary>
     /// Represents a limited set of first-in, first-out objects.

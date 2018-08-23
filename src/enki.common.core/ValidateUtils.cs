@@ -1,8 +1,8 @@
-﻿using Enki.Common.RegionalUtils;
+﻿using enki.common.core.RegionalUtils;
 using System;
 using System.Text.RegularExpressions;
 
-namespace enki.common
+namespace enki.common.core
 {
     /// <summary>
     /// Classe de validações da Enki Consultoria e Desenvolvimento.

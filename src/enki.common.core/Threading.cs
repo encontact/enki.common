@@ -1,7 +1,7 @@
 ﻿// using System;
 // using System.Threading;
 
-// namespace Enki.Common
+// namespace enki.common.core
 // {
 //     /// <summary>
 //     /// Classe responsável por criar formas de facilitar o uso de chamadas assincronas no sistema.

@@ -1,7 +1,7 @@
 ﻿using System.Text;
 using Xunit;
 
-namespace Enki.Common.WebUtils.Tests
+namespace enki.common.core.WebUtils.Tests
 {
     public class HtmlToTextTests
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 
-namespace Enki.Common.RegionalUtils
+namespace enki.common.core.RegionalUtils
 {
     public class BrazilianUtils
     {

@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using System.Security.Cryptography;
 
-namespace enki.common.cryptography
+namespace enki.common.core.cryptography
 {
     public class AesSymmetricCryptography
     {

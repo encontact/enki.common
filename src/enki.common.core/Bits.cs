@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace enki.common
+namespace enki.common.core
 {
     public static class Bits
     {

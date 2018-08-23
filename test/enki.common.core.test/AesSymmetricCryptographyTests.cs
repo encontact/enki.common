@@ -1,6 +1,6 @@
 ﻿using Xunit;
 
-namespace enki.common.cryptography.test
+namespace enki.common.core.cryptography.test
 {
     public class AesSymmetricCryptographyTests
     {

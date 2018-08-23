@@ -1,4 +1,4 @@
-﻿namespace Enki.Common
+﻿namespace enki.common.core
 {
     /// <summary>
     /// Information about a web service operation

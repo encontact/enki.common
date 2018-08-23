@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace enki.common
+namespace enki.common.core
 {
     public static class StringUtils
     {

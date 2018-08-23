@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Enki.Common
+namespace enki.common.core
 {
     /// <summary>
     /// Representa um período de tempo com possibilidade de início e fim.

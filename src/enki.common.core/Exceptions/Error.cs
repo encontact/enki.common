@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Enki.Common.Exceptions
+namespace enki.common.core.Exceptions
 {
     public class Error
     {

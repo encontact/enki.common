@@ -1,4 +1,4 @@
-﻿namespace Enki.Common
+﻿namespace enki.common.core
 {
     /// <summary>
     /// represents a parameter (input or output) of a web method.

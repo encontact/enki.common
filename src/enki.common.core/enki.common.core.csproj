@@ -7,7 +7,7 @@
     <DebugType>portable</DebugType>
     <AssemblyName>enki.common.core</AssemblyName>
     <PackageId>enki.common.core</PackageId>
-    <PackageVersion>1.0.2</PackageVersion>
+    <PackageVersion>1.0.3</PackageVersion>
   </PropertyGroup>
 
   <Target Name="PostpublishScript" AfterTargets="Publish">

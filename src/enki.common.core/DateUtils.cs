@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Enki.Common
+namespace enki.common.core
 {
     public class DateUtils
     {

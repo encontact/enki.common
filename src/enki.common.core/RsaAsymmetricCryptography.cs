@@ -3,7 +3,7 @@
 // using System.Text;
 // using System.Security.Cryptography.X509Certificates;
 
-// namespace enki.common.cryptography
+// namespace enki.common.core.cryptography
 // {
 //     //http://stackoverflow.com/questions/21685939/how-do-i-set-the-public-and-private-key-on-rsaparameters-to-use-for-rsacryptoser
 //     //https://dusted.codes/how-to-use-rsa-in-dotnet-rsacryptoserviceprovider-vs-rsacng-and-good-practise-patterns

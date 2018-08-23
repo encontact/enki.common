@@ -2,7 +2,7 @@
 using System.Security.Cryptography;
 using System.Text;
 
-namespace enki.common
+namespace enki.common.core
 {
     public static class CriptographyUtils
     {

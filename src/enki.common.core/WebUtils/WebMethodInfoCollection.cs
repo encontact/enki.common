@@ -1,6 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 
-namespace Enki.Common
+namespace enki.common.core
 {
     /// <summary>
     /// A collection of WebMethodInfo objects

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Enki.Common
+namespace enki.common.core
 {
     public class ThreadSafeQueue<T> where T : class
     {

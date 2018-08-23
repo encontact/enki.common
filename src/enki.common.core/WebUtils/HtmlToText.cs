@@ -2,7 +2,7 @@
 using System.Text.RegularExpressions;
 using System.Web;
 
-namespace Enki.Common.WebUtils
+namespace enki.common.core.WebUtils
 {
     public class HtmlToText
     {

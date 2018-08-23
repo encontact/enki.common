@@ -1,4 +1,4 @@
-﻿namespace Enki.Common.WebUtils
+﻿namespace enki.common.core.WebUtils
 {
     public class JsonReturn
     {

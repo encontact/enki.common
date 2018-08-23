@@ -3,7 +3,7 @@
 // using System.Threading;
 // using System.Threading.Tasks;
 
-// namespace Enki.Common
+// namespace enki.common.core
 // {
 //     /// <summary>
 //     /// Cria Threads paralelas para execução de uma lista de processos de forma sincrona.

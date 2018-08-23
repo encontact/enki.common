@@ -1,6 +1,6 @@
 ﻿using Xunit;
 
-namespace enki.common.test
+namespace enki.common.core.test
 {
     public class Bits
     {

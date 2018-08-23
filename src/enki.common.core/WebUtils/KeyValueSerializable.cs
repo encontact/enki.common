@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Enki.Common.WebUtils
+namespace enki.common.core.WebUtils
 {
     [Obsolete("Use Tuple<> instead, this will be serializable.")]
     public class KeyValueSerializable
