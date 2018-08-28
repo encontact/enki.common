@@ -7,6 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "enki.common.core", "src\enk
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "enki.common.core.test", "test\enki.common.core.test\enki.common.core.test.csproj", "{D0ECD3CB-6EE0-4364-A7A4-CC764712A3D3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{415E0D4F-084C-4948-B047-2751DA1E9F7E}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +31,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AD0A6675-3E2F-417D-A71C-6B86A46B08C7}
 	EndGlobalSection
 EndGlobal
