@@ -23,14 +23,13 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                sh 'dotnet test test\enki.common.core.test\enki.common.core.test.csproj'
+                sh 'dotnet test test/enki.common.core.test/enki.common.core.test.csproj'
             }
         }
-        stage('Deploy') {
+        stage('Publish') {
             steps {
                 echo 'Deploying....'
-                sh 'dotnet publish -c Release -o out/Release/'
-                // sh './build.sh --target="Zip"'
+                sh 'dotnet publish src/enki.common.core/enki.common.core.csproj -c Release -o out/Release/'
             }
         }
         stage('Package') {
@@ -39,20 +38,17 @@ pipeline {
             }
             steps {
                 echo 'Deploying....'
-                sh 'dotnet pack -o out/Release/'
+                sh 'dotnet pack'
             }
         }
     }
     post {
         success {
             archiveArtifacts 'out/Release/enki.common.zip'
-            //notifyBuild(String buildStatus = 'SUCCESSFUL')
             echo 'Build concluido com sucesso.'
         }
         failure {
             echo 'Erro ao processar o build.'
-            //notifyBuild(String buildStatus = 'FAIL')
-            //mail to: "${params.recipients}", subject: "${params.subject}", body: "${params.body}"
         }
     }
 }
