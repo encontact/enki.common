@@ -38,7 +38,7 @@ pipeline {
             }
             steps {
                 echo 'Deploying nupkg....'
-                sh 'dotnet pack -c Release'
+                sh 'dotnet pack -c Release -o out/Release/'
                 // sh 'dotnet nuget push enki.common.core.1.0.0.nupkg -k ${env.NUGET_KEY} -s https://api.nuget.org/v3/index.json'
             }
         }
