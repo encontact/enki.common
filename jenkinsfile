@@ -32,20 +32,20 @@ pipeline {
                 sh 'dotnet publish src/enki.common.core/enki.common.core.csproj -c Release -o out/Release/'
             }
         }
-        stage('Generate Artifact') {
-            steps {
-                echo 'Zipping....'
-                sh 'zip -r enki.common.zip src/enki.common.core/out/Release/'
-            }
-        }
         stage('Package') {
             when {
                 branch 'master'  
             }
             steps {
-                echo 'Deploying....'
-                sh 'dotnet pack'
-                sh 'nuget --version'
+                echo 'Deploying nupkg....'
+                sh 'dotnet pack -c Release'
+                // sh 'dotnet nuget push enki.common.core.1.0.0.nupkg -k ${env.NUGET_KEY} -s https://api.nuget.org/v3/index.json'
+            }
+        }
+        stage('Generate Artifact') {
+            steps {
+                echo 'Zipping....'
+                sh 'zip -r enki.common.zip src/enki.common.core/out/Release/'
             }
         }
     }
