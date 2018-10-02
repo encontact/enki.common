@@ -8,11 +8,11 @@ pipeline {
         timeout(time: 1, unit: 'HOURS')
     }
     stages {
-        stage ('Get Latest Code') {
-            steps {
-                git url: 'https://github.com/encontact/enki.common.git'
-            }
-        }
+        // stage ('Get Latest Code') {
+        //     steps {
+        //         git url: 'https://github.com/encontact/enki.common.git'
+        //     }
+        // }
         stage('Build') {
             steps {
                 echo 'Building..'
@@ -32,6 +32,12 @@ pipeline {
                 sh 'dotnet publish src/enki.common.core/enki.common.core.csproj -c Release -o out/Release/'
             }
         }
+        stage('Generate Artifact') {
+            steps {
+                echo 'Zipping....'
+                sh 'zip -r enki.common.zip src/enki.common.core/out/Release/'
+            }
+        }
         stage('Package') {
             when {
                 branch 'master'  
@@ -39,12 +45,13 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 sh 'dotnet pack'
+                sh 'nuget --version'
             }
         }
     }
     post {
         success {
-            archiveArtifacts 'out/Release/enki.common.zip'
+            archiveArtifacts 'enki.common.zip'
             echo 'Build concluido com sucesso.'
         }
         failure {
