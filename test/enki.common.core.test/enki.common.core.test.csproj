@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <Description>Tests to enkilabs common library for support common features.</Description>
-    <Copyright>Enkilabs 2018</Copyright>
+    <Copyright>Enkilabs 2019</Copyright>
     <TargetFrameworks>netcoreapp2.0;</TargetFrameworks>
     <AssemblyName>enki.common.core.test</AssemblyName>
     <PackageId>enki.common.core.test</PackageId>
