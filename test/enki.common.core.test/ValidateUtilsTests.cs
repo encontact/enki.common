@@ -34,6 +34,7 @@ namespace enki.common.core.Tests
         [InlineData("Client underline and & <clientemail@i.client.com>")]
         [InlineData("client_email_@domain.com")]
         [InlineData("client_email-@domain.com")]
+        [InlineData("a@domain.com")]
         public void TestValidEmailCases(string validEmail) => Assert.True(ValidateUtils.ValidaEmail(validEmail));
 
         [Theory]

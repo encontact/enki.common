@@ -7,7 +7,7 @@ namespace enki.common.core
 {
     public static class StringUtils
     {
-        public const string EmailRegExp = @"(^[\w\+\=\-\.\&]+[a-zA-Z0-9_-]@[a-zA-Z0-9]{1}(?:[a-zA-Z0-9\-]*?|[\.]{1})[a-zA-Z0-9]{1,}(?:\.{1}[a-zA-Z0-9\-]{2,})+?$)|^([^<>]*?)<(\s*[\w\+\=\-\.\&]+[a-zA-Z0-9_-]@[a-zA-Z0-9]{1}(?:[a-zA-Z0-9\-]*?|[\.]{1})[a-zA-Z0-9]{1,}(?:\.{1}[a-zA-Z0-9]{2,})+?\s*)>$";
+        public const string EmailRegExp = @"(^([\w\+\=\-\.\&]?)+[a-zA-Z0-9_-]@[a-zA-Z0-9]{1}(?:[a-zA-Z0-9\-]*?|[\.]{1})[a-zA-Z0-9]{1,}(?:\.{1}[a-zA-Z0-9\-]{2,})+?$)|^([^<>]*?)<(\s*([\w\+\=\-\.\&]?)+[a-zA-Z0-9_-]@[a-zA-Z0-9]{1}(?:[a-zA-Z0-9\-]*?|[\.]{1})[a-zA-Z0-9]{1,}(?:\.{1}[a-zA-Z0-9]{2,})+?\s*)>$";
 
         /// <summary>
         /// Formata Strings de acordo com o informado. Ex: ##/##/#### ou ##.###,##
