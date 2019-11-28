@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -106,7 +107,7 @@ namespace enki.common.core
         {
             string emailTo = text.Trim();
             var emailGroups = Regex.Match(emailTo.ToLower(), EmailRegExp).Groups;
-            var emailAddress = !string.IsNullOrEmpty(emailGroups[1]?.Value) ? emailGroups[1]?.Value : emailGroups[3]?.Value;
+            var emailAddress = !string.IsNullOrEmpty(emailGroups[1]?.Value) ? emailGroups[1]?.Value : emailGroups[4]?.Value;
             return emailAddress.Trim();
         }
 
@@ -117,9 +118,20 @@ namespace enki.common.core
         /// <returns>Nome encontrado.</returns>
         public static string ExtractEmailName(string text)
         {
-            string emailTo = text.Trim();
+            var emailTo = text.Trim();
             var emailGroups = Regex.Match(emailTo, EmailRegExp).Groups;
-            var name = emailGroups[2]?.Value ?? "";
+            var name = (emailGroups[3]?.Value ?? "").Trim();
+
+            if (name == "") return name;
+            if (name.Length <= 2) return name;
+            var firstChar = name.Substring(0, 1);
+            var lastChar = name.Substring(name.Length - 1, 1);
+            var toRemoveCharList = new List<string> { "\"", "'", "`", "´" };
+            if (toRemoveCharList.Contains(firstChar) && firstChar == lastChar)
+            {
+                name = name.Substring(0, name.Length - 1).Substring(1);
+            }
+
             return name.Trim();
         }
 
