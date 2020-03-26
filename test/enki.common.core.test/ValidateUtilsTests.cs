@@ -1,5 +1,4 @@
 ﻿using Xunit;
-using enki.common.core;
 
 namespace enki.common.core.Tests
 {
@@ -35,6 +34,11 @@ namespace enki.common.core.Tests
         [InlineData("client_email_@domain.com")]
         [InlineData("client_email-@domain.com")]
         [InlineData("a@domain.com")]
+        [InlineData("conferência@domain.com.br")]
+        [InlineData("valéria@domain.com.br")]
+        [InlineData("começo@domain.com.br")]
+        [InlineData("comeÇô@domain.com.br")]
+        [InlineData("begin@começo.com.br")]
         public void TestValidEmailCases(string validEmail) => Assert.True(ValidateUtils.ValidaEmail(validEmail));
 
         [Theory]
