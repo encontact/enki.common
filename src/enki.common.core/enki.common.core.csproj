@@ -2,12 +2,12 @@
 
   <PropertyGroup>
     <Description>Enkilabs common library for support common features.</Description>
-    <Copyright>Enkilabs 2019</Copyright>
+    <Copyright>Enkilabs 2020</Copyright>
     <TargetFramework>netstandard2.0</TargetFramework>
     <DebugType>portable</DebugType>
     <AssemblyName>enki.common.core</AssemblyName>
     <PackageId>enki.common.core</PackageId>
-    <PackageVersion>1.0.9</PackageVersion>
+    <PackageVersion>1.0.10</PackageVersion>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
