@@ -7,7 +7,7 @@
     <DebugType>portable</DebugType>
     <AssemblyName>enki.common.core</AssemblyName>
     <PackageId>enki.common.core</PackageId>
-    <PackageVersion>1.0.10</PackageVersion>
+    <PackageVersion>1.0.11</PackageVersion>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>

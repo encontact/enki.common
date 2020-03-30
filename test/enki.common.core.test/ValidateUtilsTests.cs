@@ -39,7 +39,7 @@ namespace enki.common.core.Tests
         [InlineData("começo@domain.com.br")]
         [InlineData("comeÇô@domain.com.br")]
         [InlineData("begin@começo.com.br")]
-        public void TestValidEmailCases(string validEmail) => Assert.True(ValidateUtils.ValidaEmail(validEmail));
+        public void TestValidEmailCases(string validEmail) => Assert.True(ValidateUtils.ValidaEmail(validEmail), validEmail);
 
         [Theory]
         [InlineData("nomecomprido@")]
