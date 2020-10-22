@@ -140,6 +140,8 @@ namespace enki.common.core
         // /// </summary>
         // /// <param name="text">Texto para remover os acentos.</param>
         // /// <returns>Mesma string sem os acentos.</returns>
+        /// Proposta no Twitter do Lucas Teles para esta função: https://twitter.com/LucasTeles42/status/1319070078126739457
+        /// Códigos: https://sharplab.io/#v2:EYLgxg9gTgpgtADwGwBYA0ATEBqAPgAQCYBGAWACh8AGAAn2IDoBxAGwmAEMWBLALw4Au3CADsA3BWp1GAFRgIBEyrXoMAMtxEBHJRREcAtjADOABw5gYNABYwWbAPphjFAN4UanuoWkB2D17u5AFeXsYCUACuYAI0AGIQEDRBoale+ADMNJqxABocwCwckUppngC+FCGp9Eh0KDQAshyaABT0VADaALo0HFAA5sYAlNWhQWNlAPQAVJNpkSLGHABmVvgNAMIQBqaRAjCtOTM0phGj5GWpKVdlM2dQNAC8NK335zQnxFSltxVVlz+NEWyzWyXmtwAbv1ss8aN8fhCrsdThE4QAybi/IFeJFlba7faHTHDXSAnGeegATlaABIAEQyWw0aEsSJWCArGgCZnQqDcAosKzcbLGGggZLccr00l4tJTKY0Rm8rjsmic7kq/mC4Wi8XwqiGqj0uU0Srk1IzKYQ6mtABKMAMEEhMAAgpYRAIIMZWvSAEfGACXGAA5ysZbKLaFbQ6nS73TBPd6NNpfQHg2GI2SruaAVdatJaLHnW6PV6fR1ufIBMMaBCbn8+TQRNADFw+DAMABlCKaAZwg4KBgAOVb7d4h1HUDbPH4QlECWnDEXBgAIpGcU2OgAhSLcFgYGCPF4iGAAdxoPf5IgGu/3h6grUjppW0BgFmsrybYGyImbY9nTsrz7C4cQbCkm0WbhIEPTZBBgAZoAATzhTZrH6ABVERoIgQ8AEkRFfZgYAELCcNg+DEKgJDWjADcKU8bguVaKCYJgOCDiolCAEIXjItiOIQ5CR1ELtzDAPtmigABrUCGJqb47wPI8GFdUxTETDBaPov5cyjMp8F8QslIfBgZAgYCbyfETp3HScAL4QRhBEFdl1bTYdNSc0/htYg6krYt4zLZNNC0dpvirBRayeAA+Ot9LKQcBFNTwbJnDtWindK52c1yV3XFKaAYAB1WxYFo544rQzDsLYgiiKYEj+Nw9jKOQ7T4vkileJoZqKM44TRxEMSLEk/pZMK1SBgGWABng316TQV4LDANA6MqvowB/bAaDoyasrszKHJyhdWzc6cPOxLyAT0iggA
         // public static string RemoveAccents(string text)
         // {
         //     try
