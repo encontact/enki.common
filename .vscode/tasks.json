@@ -1,16 +1,18 @@
 {
-    "version": "0.1.0",
-    "command": "dotnet",
-    "isShellCommand": true,
+    "version": "2.0.0",
+	"command": "dotnet",
     "args": [],
     "tasks": [
-        {
-            "taskName": "build",
-            "args": [
-                "${workspaceRoot}\\enki.common.core.sln"
-            ],
-            "isBuildCommand": true,
-            "problemMatcher": "$msCompile"
-        }
-    ]
+		{
+			"label": "build",
+			"type": "shell",
+			"command": "dotnet",
+			"args": [
+				"build",
+				"${workspaceRoot}\\enki.common.core.sln"
+			],
+			"problemMatcher": "$msCompile",
+			"group": "build"
+		}
+	]
 }
