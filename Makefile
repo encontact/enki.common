@@ -4,8 +4,11 @@ dotnetFramework = net5.0
 solution = ./enki.common.core.sln
 libProject = ./src/enki.common.core/enki.common.core.csproj
 distPath = ./dist
-artifactDir = ./artifact
-nupkgFile = "${basename ./artifact/*.nupkg}"
+artifactDir = ./artifacts
+nupkgFile = $(shell find ./artifacts -type f -name '*.nupkg')
+
+show-pack:
+	echo "${nupkgFile}"
 
 run-clean: clean restore build
 
@@ -30,7 +33,7 @@ pack:
 	dotnet pack -c Release -o ${artifactDir}
 
 push-pack:
-	dotnet nuget push ${nupkgFile} -k ${NUGET_API}
+	dotnet nuget push ${nupkgFile} --api-key ${NUGET_API} --source https://api.nuget.org/v3/index.json
 
 # Mais em: https://renatogroffe.medium.com/net-nuget-atualizando-packages-via-linha-de-comando-b0c6b596ed2
 # Para instalar dependência: dotnet tool install --global dotnet-outdated-tool
