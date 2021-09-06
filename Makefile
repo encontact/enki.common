@@ -1,8 +1,10 @@
 # To learn makefiles: https://makefiletutorial.com/
 # On windows, use NMake: https://docs.microsoft.com/pt-br/cpp/build/reference/nmake-reference?view=msvc-160
 dotnetFramework = net5.0
+packFramework = netstandard2.0
 solution = ./enki.common.core.sln
 libProject = ./src/enki.common.core/enki.common.core.csproj
+nuspec = ./enki.common.core.nuspec
 distPath = ./dist
 artifactDir = ./artifacts
 nupkgFile = $(shell find ./artifacts -type f -name '*.nupkg')
@@ -30,7 +32,7 @@ publish:
 	dotnet publish ${libProject} -c Release -o out/Release/
 
 pack:
-	dotnet pack -c Release -o ${artifactDir}
+	dotnet pack -c Release -o ${artifactDir} ${libProject}
 
 push-pack:
 	dotnet nuget push ${nupkgFile} --api-key ${NUGET_API} --source https://api.nuget.org/v3/index.json
