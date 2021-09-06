@@ -40,6 +40,8 @@ namespace enki.common.core.Tests
         [InlineData("comeÇô@domain.com.br")]
         [InlineData("begin@começo.com.br")]
 		[InlineData("Fulano Ciclano com Deltrano <fulano.deltrano@tmhm.encontact-internal.com.br>")]
+        [InlineData("fulano.silva@next.x.br")]
+        [InlineData("Fulano Bla Bla <fulano.silva@next.x.br>")]
         public void TestValidEmailCases(string validEmail) => Assert.True(ValidateUtils.ValidaEmail(validEmail), validEmail);
 
         [Theory]
