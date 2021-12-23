@@ -12,7 +12,10 @@ namespace enki.common.core.Tests
         [InlineData("nomecomprido@enkilabs.com.br", "'nomecomprido Coelho Sartorelli' <   nomecomprido@enkilabs.com.br >")]
         [InlineData("nomecomprido@enkilabs.com.br", "`nomecomprido Coelho Sartorelli` <   nomecomprido@enkilabs.com.br >")]
         [InlineData("nomecomprido@enkilabs.com.br", "´nomecomprido Coelho Sartorelli´ <   nomecomprido@enkilabs.com.br >")]
-        public void TestExtractEmailAddress(string expected, string originalData) => Assert.Equal(expected, StringUtils.ExtractEmailAddress(originalData));
+        [InlineData("testeenki@enkiserver.com.br", "\"testeenki@enkiserver.com.br testeenki@enkiserver.com.br testeenki@enkiserver.com.br testeenki@enkiserver.com.br testeenki@enkiserver.com.br testeenki@enkiserver.com.br testeenki@enkiserver.com.br <testeenki@enkiserver.com.br> testeenki@enkiserver.com.br <testeenki@enkiserver.com.br>\" <testeenki@enkiserver.com.br>")]
+        [InlineData("testeenki@enkiserver.com.br", "\" <testeenki@enkiserver.com.br> testeenki@enkiserver.com.br\" <testeenki@enkiserver.com.br>")]
+        public void TestExtractEmailAddress(string expected, string originalData) 
+            => Assert.Equal(expected, StringUtils.ExtractEmailAddress(originalData));
 
         [Theory]
         [InlineData("Reinaldo C Sartorelli", "\"Reinaldo C Sartorelli\" <reinaldo@enki.com>")]
@@ -24,6 +27,9 @@ namespace enki.common.core.Tests
         [InlineData("nomecomprido Coelho Sartorelli", "'nomecomprido Coelho Sartorelli' <   nomecomprido@enkilabs.com.br >")]
         [InlineData("nomecomprido Coelho Sartorelli", "`nomecomprido Coelho Sartorelli` <   nomecomprido@enkilabs.com.br >")]
         [InlineData("nomecomprido Coelho Sartorelli", "´nomecomprido Coelho Sartorelli´ <   nomecomprido@enkilabs.com.br >")]
-        public void TestExtractEmailName(string expected, string originalData) => Assert.Equal(expected, StringUtils.ExtractEmailName(originalData));
+        [InlineData("testeenki@enkiserver.com.br testeenki@enkiserver.com.br testeenki@enkiserver.com.br testeenki@enkiserver.com.br testeenki@enkiserver.com.br testeenki@enkiserver.com.br testeenki@enkiserver.com.br <testeenki@enkiserver.com.br> testeenki@enkiserver.com.br <testeenki@enkiserver.com.br>", "\"testeenki@enkiserver.com.br testeenki@enkiserver.com.br testeenki@enkiserver.com.br testeenki@enkiserver.com.br testeenki@enkiserver.com.br testeenki@enkiserver.com.br testeenki@enkiserver.com.br <testeenki@enkiserver.com.br> testeenki@enkiserver.com.br <testeenki@enkiserver.com.br>\" <testeenki@enkiserver.com.br>")]
+        [InlineData("<testeenki@enkiserver.com.br> testeenki@enkiserver.com.br", "\" <testeenki@enkiserver.com.br> testeenki@enkiserver.com.br\" <testeenki@enkiserver.com.br>")]
+        public void TestExtractEmailName(string expected, string originalData) 
+            => Assert.Equal(expected, StringUtils.ExtractEmailName(originalData));
     }
 }
