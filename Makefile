@@ -32,7 +32,7 @@ publish:
 	dotnet publish ${libProject} -c Release -o out/Release/
 
 pack:
-    dotnet pack -c Release -o ${artifactDir} ${libProject}
+	dotnet pack -c Release -o ${artifactDir} ${libProject}
 
 push-pack:
 	dotnet nuget push ${nupkgFile} --api-key ${NUGET_API} --source https://api.nuget.org/v3/index.json
