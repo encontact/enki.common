@@ -32,7 +32,7 @@ publish:
 	dotnet publish ${libProject} -c Release -o out/Release/
 
 pack:
-	dotnet pack -c Release -o ${artifactDir} ${libProject}
+    dotnet pack -c Release -o ${artifactDir} ${libProject}
 
 push-pack:
 	dotnet nuget push ${nupkgFile} --api-key ${NUGET_API} --source https://api.nuget.org/v3/index.json
@@ -45,3 +45,12 @@ update-dependencies:
 # Mais em: https://devblogs.microsoft.com/nuget/how-to-scan-nuget-packages-for-security-vulnerabilities/
 check-vulnerabilities:
 	dotnet list package --vulnerable
+
+# Detalhes de versionamento em:
+# https://github.com/dotnet/Nerdbank.GitVersioning/blob/master/doc/nbgv-cli.md
+prepare-release:
+	nbgv prepare-release
+
+# Mesmo após gerar a Tag é necessário enviar a tag para o servidor
+tag-release:
+	nbgv tag
