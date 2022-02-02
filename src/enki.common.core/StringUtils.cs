@@ -8,7 +8,7 @@ namespace enki.common.core
 {
     public static class StringUtils
     {
-        public const string EmailRegExp = @"(^([\w\+\=\-\.\&\u00C0-\u00ff]?)+[\u00C0-\u00ffa-zA-Z0-9_-]@([\u00C0-\u00ffa-zA-Z0-9]*?(?:[\u00C0-\u00ffa-zA-Z0-9\-]*?){1}|[\.]{1})[\u00C0-\u00ffa-zA-Z0-9]{1,}(?:\.{1}[\u00C0-\u00ffa-zA-Z0-9\-]{1,})+?$)|^([^<>]*?|""(.*)""*?)<(\s*([\w\+\=\-\.\&\u00C0-\u00ff]?)+[\u00C0-\u00ffa-zA-Z0-9_-]@([\u00C0-\u00ffa-zA-Z0-9]*?(?:[\u00C0-\u00ffa-zA-Z0-9\-]*?){1}|[\.]{1})[\u00C0-\u00ffa-zA-Z0-9]{1,}(?:\.{1}[\u00C0-\u00ffa-zA-Z0-9\-]{1,})+?\s*)>$";
+        public const string EmailRegExp = @"(^(?:[\w\+\=\-\.\&\u00C0-\u00ff]?)+[\u00C0-\u00ffa-zA-Z0-9_-]@[\u00C0-\u00ffa-zA-Z0-9\-]{1,}[\.]{1}[\u00C0-\u00ffa-zA-Z0-9\-]{1,}(?:\.{1}[\u00C0-\u00ffa-zA-Z0-9\-]{1,})*?$)|^([^<>]*?|""(?:.*)""*?)<(\s*(?:[\w\+\=\-\.\&\u00C0-\u00ff]?)+[\u00C0-\u00ffa-zA-Z0-9_-]@[\u00C0-\u00ffa-zA-Z0-9\-]{1,}[\.]{1}[\u00C0-\u00ffa-zA-Z0-9\-]{1,}(?:\.{1}[\u00C0-\u00ffa-zA-Z0-9\-]{1,})*?\s*)>$";
 
         /// <summary>
         /// Formata Strings de acordo com o informado. Ex: ##/##/#### ou ##.###,##
@@ -128,7 +128,7 @@ namespace enki.common.core
         {
             var emailTo = text.Trim();
             var emailGroups = Regex.Match(emailTo, EmailRegExp).Groups;
-            var name = (emailGroups[3]?.Value ?? "").Trim();
+            var name = (emailGroups[2]?.Value ?? "").Trim();
 
             if (name == "") return name;
             if (name.Length <= 2) return name;
