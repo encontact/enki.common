@@ -38,19 +38,24 @@ push-pack:
 	dotnet nuget push ${nupkgFile} --api-key ${NUGET_API} --source https://api.nuget.org/v3/index.json
 
 # Mais em: https://renatogroffe.medium.com/net-nuget-atualizando-packages-via-linha-de-comando-b0c6b596ed2
-# Para instalar dependência: dotnet tool install --global dotnet-outdated-tool
+# Para instalar dependência: dotnet tool install --local dotnet-outdated-tool
 update-dependencies:
-	dotnet-outdated -u:Prompt ${solution}
+	dotnet tool restore
+	dotnet dotnet-outdated -u:Prompt ${solution}
 
 # Mais em: https://devblogs.microsoft.com/nuget/how-to-scan-nuget-packages-for-security-vulnerabilities/
 check-vulnerabilities:
+	dotnet tool restore
 	dotnet list package --vulnerable
+	dotnet security-scan ${solution} --excl-proj=tests/encontact.application.test/**
 
 # Detalhes de versionamento em:
 # https://github.com/dotnet/Nerdbank.GitVersioning/blob/master/doc/nbgv-cli.md
 prepare-release:
+	dotnet tool restore
 	nbgv prepare-release
 
 # Mesmo após gerar a Tag é necessário enviar a tag para o servidor
 tag-release:
+	dotnet tool restore
 	nbgv tag
