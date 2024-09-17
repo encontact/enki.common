@@ -49,13 +49,25 @@ check-vulnerabilities:
 	dotnet list package --vulnerable
 	dotnet security-scan ${solution} --excl-proj=tests/encontact.application.test/**
 
+# Inicializa a estrutura de versionamento no sistema
+init-versioning:
+	dotnet nbgv install
+
 # Detalhes de versionamento em:
 # https://github.com/dotnet/Nerdbank.GitVersioning/blob/master/doc/nbgv-cli.md
 prepare-release:
 	dotnet tool restore
-	nbgv prepare-release
+	export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1 && dotnet nbgv prepare-release --format json
+
+# Altera o sistema preparando uma nova estrutura de versão base.
+# https://github.com/dotnet/Nerdbank.GitVersioning/blob/main/doc/nbgv-cli.md#customizing-the-next-version
+# Outra forma: nbgv prepare-release --versionIncrement Major
+prepare-next-version:
+	dotnet tool restore
+	export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1 && dotnet nbgv prepare-release --nextVersion ${NextReleaseNumber} --format json
 
 # Mesmo após gerar a Tag é necessário enviar a tag para o servidor
 tag-release:
+#   Pegando o resultado e separando apenas o comando de PUSH: cat dist/tagged-version.txt | cut -d ' ' -f 7-
 	dotnet tool restore
-	nbgv tag
+	export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1 && dotnet nbgv tag
