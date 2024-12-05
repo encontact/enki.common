@@ -39,14 +39,15 @@ namespace enki.common.core.Tests
         [InlineData("começo@domain.com.br")]
         [InlineData("comeÇô@domain.com.br")]
         [InlineData("begin@começo.com.br")]
-		[InlineData("Fulano Ciclano com Deltrano <fulano.deltrano@tmhm.encontact-internal.com.br>")]
+	[InlineData("Fulano Ciclano com Deltrano <fulano.deltrano@tmhm.encontact-internal.com.br>")]
         [InlineData("fulano.silva@next.x.br")]
         [InlineData("Fulano Bla Bla <fulano.silva@next.x.br>")]
-		[InlineData("\"Fulano <Ciclano> com Deltrano\" <fulano.deltrano@tmhm.encontact-internal.com.br>")]
+	[InlineData("\"Fulano <Ciclano> com Deltrano\" <fulano.deltrano@tmhm.encontact-internal.com.br>")]
         [InlineData("fulana.mendes@h.GROBO")]
         [InlineData("Fulaninha Mendes <fulana.mendes@h.GROBO>")]
         [InlineData("nomecomprido@-enkilabs.software")] // Valid on Gmail.
         [InlineData("nomecomprido@enkilabs-.software")] // Valid on Gmail.
+        [InlineData("\"Foca\"<foca@pessoal.com>")] // Valid on Gmail.
         public void TestValidEmailCases(string validEmail) => Assert.True(ValidateUtils.ValidaEmail(validEmail), validEmail);
 
         [Theory]
