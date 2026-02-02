@@ -64,6 +64,7 @@ namespace enki.common.core.Tests
         [InlineData("scan11@com.br.")]
         [InlineData("invalidemail@domain..com.br")]
         [InlineData("teste2.@enkilabs.com.br")]
+        [InlineData("\"Foca\"<foca@pessoal.com.b>")] //tem que dar invalid -- Está passando como true, deveria dar invalid
         public void TestInvalidEmailCases(string invalidEmail) => Assert.False(ValidateUtils.ValidaEmail(invalidEmail));
     }
 }
