@@ -1,6 +1,6 @@
 # To learn makefiles: https://makefiletutorial.com/
 # On windows, use NMake: https://docs.microsoft.com/pt-br/cpp/build/reference/nmake-reference?view=msvc-160
-dotnetFramework = net5.0
+dotnetFramework = net8.0
 packFramework = netstandard2.0
 solution = ./enki.common.core.sln
 libProject = ./src/enki.common.core/enki.common.core.csproj
